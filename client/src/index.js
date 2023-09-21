@@ -8,7 +8,7 @@ import {
 import './index.css';
 import App from './App';
 import ErrorPage from './pages/ErrorPage';
-import CaseStudy from './components/CaseStudy';
+import StudyPost from './components/StudyPost';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/c/study-post",
-    element: <CaseStudy/>
+    element: <StudyPost/>
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,5 +1,4 @@
 import {Link} from 'react'
-import logo from './assets/logo.svg'
 import Header from './components/Header';
 import StudyPost from './components/StudyPost';
 function App() {
