@@ -1,16 +1,13 @@
-import {Link} from 'react'
-import Header from './components/Header';
-import StudyPost from './components/StudyPost';
+import Header from "./components/Header";
+import PostCard from "./components/PostCard";
 function App() {
   return (
     <>
-    <div className="App">
-        <Header/>
-        <StudyPost/>
-        <StudyPost/>
-        <StudyPost/>
-
-    </div></>
+      <div className="App">
+        <Header />
+        <PostCard/>
+      </div>
+    </>
   );
 }
 

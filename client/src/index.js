@@ -8,7 +8,8 @@ import {
 import './index.css';
 import App from './App';
 import ErrorPage from './pages/ErrorPage';
-import StudyPost from './components/StudyPost';
+import PostPage from './pages/PostPage';
+import Author from './pages/Author';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
   },
   {
-    path: "/c/study-post",
-    element: <StudyPost/>
+    path: "/p/post-page",
+    element: <PostPage/>
+  },
+  {
+    path: "/author",
+    element: <Author/>
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

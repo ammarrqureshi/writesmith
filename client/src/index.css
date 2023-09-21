@@ -19,7 +19,7 @@ code {
     monospace;
 }
 
-.study-post{
+.post-card{
   background-color: pink;
   /* max-width: 50%; */
   display: inline-block;
