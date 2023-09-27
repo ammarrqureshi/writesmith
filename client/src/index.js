@@ -19,19 +19,19 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
   },
   {
-    path: "/p/post-page",
+    path: "p/post-page",
     element: <PostPage/>
   },
   {
-    path: "/author",
+    path: "author",
     element: <Author/>
   },
   {
-    path: "/login",
+    path: "login",
     element: <Login/>
   },
   {
-    path: "/signup",
+    path: "signup",
     element: <SignUp/>
   }
 ]);
