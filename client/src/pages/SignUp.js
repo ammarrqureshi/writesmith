@@ -9,7 +9,7 @@ const SignUp = () => {
 
         <input type="email"  placeholder='Email'/>
         <input type="password"  placeholder='Password'/>
-        <button onSubmit={console.log("registered!")}>Sign Up</button>
+        <button> Sign Up</button>
     </form>
 </div>
   )
