@@ -7,7 +7,7 @@ const Login = () => {
         <form action=''>
             <input type="username"  placeholder='Username'/>
             <input type="password"  placeholder='Password'/>
-            <button onSubmit={console.log("submitted login")}>Login</button>
+            <button >Login</button>
         </form>
     </div>
   )
