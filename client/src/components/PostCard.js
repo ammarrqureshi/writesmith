@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const PostCard = () => {
   return (
-    <Link to="/p/post-page">
+    <Link to="/posts/1">
      <div className='post-card'>
       <div>
         <img src="https://plus.unsplash.com/premium_photo-1683880731495-ae0f4bf18c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
