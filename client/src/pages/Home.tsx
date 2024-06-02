@@ -1,7 +1,14 @@
+import { Button } from 'antd'
 import React from 'react'
 
-export const Home = () => {
+export const Home
+
+= () => {
   return (
-    <div>Home</div>
+    <div>
+
+        <Button type='primary'>Login</Button>
+        <Button type='default'>Register</Button>
+    </div>
   )
 }
