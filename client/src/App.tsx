@@ -1,11 +1,19 @@
+import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import { DatePicker } from "antd";
+import { Home } from "./pages/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
 
 function App() {
   return (
     <>
       <div>
-        <DatePicker />
-        Hello Writesmith
+        <RouterProvider router={router} />{" "}
       </div>
     </>
   );
