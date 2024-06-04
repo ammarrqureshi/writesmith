@@ -1,12 +1,16 @@
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import { DatePicker } from "antd";
 import { Home } from "./pages/Home";
+import { Login } from "./pages/Login";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
+  {
+    path: "/login",
+    element: <Login/>
+  }
 ]);
 
 function App() {
