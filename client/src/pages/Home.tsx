@@ -1,14 +1,16 @@
-import { Button } from 'antd'
-import React from 'react'
+import { Button } from "antd";
+import React from "react";
+import { Link } from "react-router-dom";
 
-export const Home
-
-= () => {
+export const Home = () => {
   return (
     <div>
-
-        <Button type='primary'>Login</Button>
-        <Button type='default'>Register</Button>
+      <Link to="/login">
+        <Button type="primary">Login</Button>
+      </Link>
+      <Link to="/register">
+        <Button type="default">Register</Button>
+      </Link>
     </div>
-  )
-}
+  );
+};
