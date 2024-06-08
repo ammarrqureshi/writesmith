@@ -5,7 +5,7 @@ import { PostPage } from "./PostPage";
 
 export const Home = () => {
   return (
-    <div>
+    <div >
       <PostPage/>
       <Link to="/login">
         <Button type="primary">Login</Button>

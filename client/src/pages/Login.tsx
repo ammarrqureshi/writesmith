@@ -1,6 +1,7 @@
 import React from "react";
 import type { FormProps } from "antd";
-import { Button, Checkbox, Form, Input } from "antd";
+import { Button, Card, Checkbox, Form, Input } from "antd";
+import { Key, User } from "lucide-react";
 
 type FieldType = {
   username?: string;
@@ -8,46 +9,36 @@ type FieldType = {
   remember?: string;
 };
 
-const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-  console.log("Success:", values);
+export const Login = () => {
+  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
+    console.log("Success:", values);
+  };
+
+  const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
+    errorInfo
+  ) => {
+    console.log("Failed:", errorInfo);
+  };
+
+  return (
+    <div className=" h-screen flex justify-center items-center">
+      <Card title="Login">
+        <form action="" className="flex flex-col gap-4 min-w-80">
+          <Input size="large" placeholder="Enter Username" prefix={<User />} />
+          <Input.Password
+            size="large"
+            placeholder="Enter Password"
+            prefix={<Key />}
+          />
+          <Checkbox>Remember me</Checkbox>
+          <Button type="primary" htmlType="submit">
+            Login
+          </Button>
+          <Button type="default" htmlType="submit">
+            Create New Account
+          </Button>
+        </form>
+      </Card>
+    </div>
+  );
 };
-
-const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (errorInfo) => {
-  console.log("Failed:", errorInfo);
-};
-
-export const Login = () => (
-  <Form
-    name="basic"
-    initialValues={{ remember: true }}
-    onFinish={onFinish}
-    onFinishFailed={onFinishFailed}
-    autoComplete="off"
-  >
-    <Form.Item<FieldType>
-      label="Username"
-      name="username"
-      rules={[{ required: true, message: "Please input your username!" }]}
-    >
-      <Input />
-    </Form.Item>
-
-    <Form.Item<FieldType>
-      label="Password"
-      name="password"
-      rules={[{ required: true, message: "Please input your password!" }]}
-    >
-      <Input.Password />
-    </Form.Item>
-
-    <Form.Item<FieldType> name="remember" valuePropName="checked">
-      <Checkbox>Remember me</Checkbox>
-    </Form.Item>
-
-    <Form.Item>
-      <Button type="primary" htmlType="submit">
-        Submit
-      </Button>
-    </Form.Item>
-  </Form>
-);
