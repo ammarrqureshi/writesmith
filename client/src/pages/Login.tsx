@@ -1,25 +1,8 @@
-import type { FormProps } from "antd";
 import { Button, Card, Checkbox, Input } from "antd";
 import { Key, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
-type FieldType = {
-  username?: string;
-  password?: string;
-  remember?: string;
-};
-
 export const Login = () => {
-  const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
-    console.log("Success:", values);
-  };
-
-  const onFinishFailed: FormProps<FieldType>["onFinishFailed"] = (
-    errorInfo
-  ) => {
-    console.log("Failed:", errorInfo);
-  };
-
   return (
     <div className=" h-screen flex justify-center items-center">
       <Card title="Login">
