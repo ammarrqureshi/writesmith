@@ -1,5 +1,5 @@
 import { Button, Card, Checkbox, Input } from "antd";
-import { Key, User } from "lucide-react";
+import { LuKey, LuUser } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
@@ -7,11 +7,15 @@ export const Login = () => {
     <div className=" h-screen flex justify-center items-center">
       <Card title="Login">
         <form action="" className="flex flex-col gap-4 min-w-80">
-          <Input size="large" placeholder="Enter Username" prefix={<User />} />
+          <Input
+            size="large"
+            placeholder="Enter Username"
+            prefix={<LuUser />}
+          />
           <Input.Password
             size="large"
             placeholder="Enter Password"
-            prefix={<Key />}
+            prefix={<LuKey />}
           />
           <Checkbox>Remember me</Checkbox>
           <Button className="self-start" type="link">
