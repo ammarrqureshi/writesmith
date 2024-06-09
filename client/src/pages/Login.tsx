@@ -14,6 +14,9 @@ export const Login = () => {
             prefix={<Key />}
           />
           <Checkbox>Remember me</Checkbox>
+          <Button className="self-start" type="link">
+            Forgot your password?
+          </Button>
           <Button type="primary" htmlType="submit" className="w-full">
             Login
           </Button>
