@@ -1,16 +1,19 @@
 import Icon from "@ant-design/icons/lib/components/Icon";
-import { Button } from "antd";
-import { FaBars, FaRegEdit } from "react-icons/fa";
+import { Avatar, Button } from "antd";
+import { FaGripLines, FaRegEdit } from "react-icons/fa";
+import userimg from "src/assets/amq-dp.jpeg";
 import logo from "src/assets/writesmith-logo.svg";
+
+
 export const Navbar = () => {
   return (
-    <div >
-      <Button type="text" icon={<FaBars />} />
+    <div className=" flex justify-between items-center px-4 py-1 border-b">
+      <Button type="text" icon={<FaGripLines size={30} />} />
 
-      <div>
+      <div className="py-2">
         <img src={logo} alt="writesmith" />
       </div>
-      <div>
+      <div className="flex gap-6">
         <Button
           type="primary"
           icon={<Icon component={FaRegEdit} />}
@@ -18,6 +21,9 @@ export const Navbar = () => {
         >
           Write
         </Button>
+        <Avatar src={userimg} size={45} alt="avatar">
+          A
+        </Avatar>
       </div>
     </div>
   );
