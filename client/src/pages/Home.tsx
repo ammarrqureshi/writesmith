@@ -1,5 +1,6 @@
 import { Button } from "antd";
 import { Link } from "react-router-dom";
+import { FeedPost } from "src/components/HomeFeed/FeedPost";
 export const Home = () => {
   const posts = [
     {
@@ -30,7 +31,7 @@ export const Home = () => {
   return (
     <div>
       {posts.map((post) => (
-        <h1 key={post.id}>{post.title}</h1>
+        <FeedPost data={post} />
       ))}
       <Link to="/login">
         <Button type="primary">Login</Button>
