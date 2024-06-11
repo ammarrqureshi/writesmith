@@ -1,5 +1,6 @@
-import { Avatar, Card } from "antd";
+import { Avatar, Button, Card } from "antd";
 import Meta from "antd/es/card/Meta";
+import { FaRegHeart } from "react-icons/fa";
 import { PostType } from "src/types/types";
 
 interface FeedPostProps {
@@ -16,6 +17,13 @@ export const FeedPost = ({ data }: FeedPostProps) => {
           title={data.title}
           description={data.desc}
         />
+
+        <div className="flex justify-between w-full">
+          <Button type="link" icon={<FaRegHeart size={20} />} />
+          <Button type="link" icon={<FaRegHeart size={20} />} />
+
+          <Button type="link" icon={<FaRegHeart size={20} />} />
+        </div>
       </Card>
     </div>
   );
