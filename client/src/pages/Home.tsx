@@ -33,12 +33,6 @@ export const Home = () => {
       {posts.map((post) => (
         <FeedPost data={post} />
       ))}
-      <Link to="/login">
-        <Button type="primary">Login</Button>
-      </Link>
-      <Link to="/register">
-        <Button type="default">Register</Button>
-      </Link>
     </div>
   );
 };
