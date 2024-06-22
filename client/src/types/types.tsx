@@ -3,4 +3,7 @@ export interface PostType {
   title: string;
   desc: string;
   img: string;
+  username: string;
+  createdAt: Date;
+  timeToRead: string;
 }
