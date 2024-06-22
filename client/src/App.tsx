@@ -1,8 +1,4 @@
-import {
-  Outlet,
-  RouterProvider,
-  createBrowserRouter
-} from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
@@ -21,7 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <h1>Oops!  where have you come you stupid! </h1> ,
+    errorElement: <h1>Oops! where have you come you stupid! </h1>,
     children: [
       {
         path: "/",

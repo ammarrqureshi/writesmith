@@ -1,9 +1,9 @@
 import { Avatar, Button, Card, Typography } from "antd";
-import Meta from "antd/es/card/Meta";
 import { Suspense } from "react";
 import { FaRegComment, FaRegHeart, FaRegPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { PostType } from "src/types/types";
+
 
 interface FeedPostProps {
   data: PostType;
