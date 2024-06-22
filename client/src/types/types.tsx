@@ -7,3 +7,11 @@ export interface PostType {
   createdAt: Date;
   timeToRead: string;
 }
+
+export interface AuthorType {
+  id: number;
+  name: string;
+  designation: string;
+  joinedDate: Date;
+  avatar: string;
+}

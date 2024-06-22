@@ -1,3 +1,4 @@
+import { AuthorsContainer } from "src/components/HomeFeed/AuthorsContainer";
 import { FeedPost } from "src/components/HomeFeed/FeedPost";
 export const Home = () => {
   const posts = [
@@ -39,10 +40,18 @@ export const Home = () => {
     },
   ];
   return (
-    <div>
-      {posts.map((post) => (
-        <FeedPost data={post} />
-      ))}
-    </div>
+    <>
+      <div className="flex gap-4">
+        <div>
+          {posts.map((post) => (
+            <FeedPost key={post.id} data={post} />
+          ))}
+        </div>
+        <div>
+          authors list
+          <AuthorsContainer />
+        </div>
+      </div>
+    </>
   );
 };
