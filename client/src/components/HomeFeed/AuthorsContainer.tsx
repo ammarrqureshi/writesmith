@@ -10,21 +10,21 @@ const authors = [
   },
   {
     id: 2,
-    name: "Chris Ahmed",
+    name: "Ammar Qureshi",
     designation: "Digital Entrepreneur and Creator",
     joinedDate: new Date("06-22-2014"),
     avatar: "https://picsum.photos/100/100",
   },
   {
     id: 3,
-    name: "Chris Ahmed",
+    name: "Usama Kamran",
     designation: "Digital Entrepreneur and Creator",
     joinedDate: new Date("06-22-2014"),
     avatar: "https://picsum.photos/100/100",
   },
   {
     id: 4,
-    name: "Chris Ahmed",
+    name: "Noman Hussain",
     designation: "Digital Entrepreneur and Creator",
     joinedDate: new Date("06-22-2014"),
     avatar: "https://picsum.photos/100/100",
@@ -33,7 +33,7 @@ const authors = [
 
 export const AuthorsContainer = () => {
   return (
-    <div>
+    <div className=" flex  flex-col gap-2 ">
       {authors.map((author) => (
         <AuthorCard key={author.id} authorData={author} />
       ))}

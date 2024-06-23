@@ -1,5 +1,9 @@
+import { Typography } from "antd";
 import { AuthorsContainer } from "src/components/HomeFeed/AuthorsContainer";
 import { FeedPost } from "src/components/HomeFeed/FeedPost";
+
+const { Title } = Typography;
+
 export const Home = () => {
   const posts = [
     {
@@ -48,7 +52,8 @@ export const Home = () => {
           ))}
         </div>
         <div>
-          authors list
+          <Title level={3}>Top Authors</Title>
+
           <AuthorsContainer />
         </div>
       </div>
