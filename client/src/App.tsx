@@ -1,5 +1,5 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { PostPage } from "./pages/PostPage";
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <h1>Oops! where have you come you stupid! </h1>,
+    // errorElement: <h1 className="w-full text-center text-3xl py-8">Oops! You did something stupid! </h1>,
     children: [
       {
         path: "/",
@@ -25,7 +25,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/p/:id",
-        element: <PostPage />,
+        element: (
+          <PostPage
+            postData={{
+              id: 2,
+              title: "consectetur adipiscing elit. Integer tincidunt blandit",
+              desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt blandit magna non tempus. Orci varius natoque penatibus et magnis dis parturient montes, ",
+              img: "https://picsum.photos/400/300",
+              username: "Ammar Qureshi",
+              createdAt: new Date("23-06-2023"),
+              timeToRead: "7 minutes read",
+            }}
+          />
+        ),
       },
       {
         path: "/write",

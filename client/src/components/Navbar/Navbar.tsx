@@ -6,7 +6,7 @@ import userimg from "src/assets/amq-dp.jpeg";
 import logo from "src/assets/writesmith-logo.svg";
 
 export const Navbar = () => {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   return (
     <div className=" flex justify-between items-center px-4 py-1 border-b">
       <Button type="text" icon={<FaGripLines size={30} />} />
