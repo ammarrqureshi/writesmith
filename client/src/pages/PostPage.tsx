@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { AiOutlineExport } from "react-icons/ai";
 import { FaPlus, FaRegHeart, FaRegPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { SmallPostCard } from "src/components/HomeFeed/UI/SmallPostCard";
 import { PostType } from "src/types/types";
 
 const { Text, Title } = Typography;
@@ -69,6 +70,10 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
           </div>
         </Card>
       </Suspense>
+
+      <div>
+        <SmallPostCard postData={postData} />
+      </div>
     </div>
   );
 };
