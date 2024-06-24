@@ -13,7 +13,6 @@ export const Editor = () => {
     placeholder: "Start writing here...",
   };
   const [content, setContent] = useState("");
-  console.log(content);
 
   return (
     <div className=" my-10 flex flex-col gap-8 relative">
