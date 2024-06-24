@@ -1,7 +1,6 @@
 import { Typography } from "antd";
 import { AuthorsContainer } from "src/pages/Home/AuthorsContainer";
 import { FeedPost } from "src/pages/Home/FeedPost";
-import { RelatedPostContainer } from "../SinglePost/RelatedPostContainer";
 
 const { Title } = Typography;
 

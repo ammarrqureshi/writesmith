@@ -6,7 +6,6 @@ import { FaPlus, FaRegHeart, FaRegPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { SmallPostCard } from "src/components/UI/SmallPostCard";
 import { PostType } from "src/types/types";
-import { RelatedPostContainer } from "./RelatedPostContainer";
 
 const { Text, Title } = Typography;
 export const PostPage = ({ postData }: { postData: PostType }) => {

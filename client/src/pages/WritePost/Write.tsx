@@ -1,17 +1,19 @@
 import Icon from "@ant-design/icons";
-import { Avatar, Button, Card, Input, Typography } from "antd";
+import { Avatar, Button, Card, Typography } from "antd";
+import TextArea from "antd/es/input/TextArea";
 import {
-  AiOutlineArrowRight,
-  AiOutlineFileImage,
-  AiOutlineSend,
+    AiOutlineArrowRight,
+    AiOutlineFileImage,
+    AiOutlineSend,
 } from "react-icons/ai";
-import { FaRegHeart, FaRegPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Editor } from "./Editor";
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 export const Write = () => {
+  const today_date = new Date();
+
   return (
     <div>
       <Card className="pb-10">
@@ -24,7 +26,13 @@ export const Write = () => {
               />
               <div className="flex flex-col">
                 <Text className="text-lg">Ammar Qureshi</Text>
-                <Text type="secondary">Lorem ipsum</Text>
+                <Text type="secondary">
+                  {today_date.toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </Text>
               </div>
             </div>
           </Link>
@@ -37,11 +45,11 @@ export const Write = () => {
             Publish
           </Button>
         </div>
-
-        <Input
+        <TextArea
           className="text-4xl font-bold py-8"
           variant="borderless"
           placeholder="Type your Title here..."
+          autoSize={true}
         />
 
         <div className="flex gap-4">

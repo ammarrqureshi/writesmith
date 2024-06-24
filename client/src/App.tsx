@@ -1,10 +1,9 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Home } from "./pages/Home/Home";
-import { Login } from "./pages/UserAuth/Login";
 import { PostPage } from "./pages/SinglePost/PostPage";
+import { Login } from "./pages/UserAuth/Login";
 import { Register } from "./pages/UserAuth/Register";
-import { Editor } from "./pages/WritePost/Editor";
 import { Write } from "./pages/WritePost/Write";
 
 const Layout = () => {
