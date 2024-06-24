@@ -78,6 +78,7 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
           <SmallPostCard postData={postData} />
         </div>
         <Button
+          href="/"
           className="self-center mt-20"
           type="primary"
           icon={<Icon component={AiOutlineHome} />}

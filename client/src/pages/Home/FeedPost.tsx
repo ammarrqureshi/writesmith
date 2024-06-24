@@ -13,7 +13,15 @@ export const FeedPost = ({ data }: FeedPostProps) => {
   return (
     <div>
       <Suspense fallback={<h1>Loading...</h1>}>
-        <Card cover={<img alt="example" src={data.img} />}>
+        <Card
+          cover={
+            <img
+              className="max-h-96 object-cover"
+              alt="example"
+              src={data.img}
+            />
+          }
+        >
           <Text type="secondary">{data.timeToRead}</Text>
           <Link to={`/p/${data.id}`}>
             <Title level={2}>{data.title}</Title>{" "}
