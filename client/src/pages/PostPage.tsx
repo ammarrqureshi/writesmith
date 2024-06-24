@@ -1,6 +1,8 @@
-import { Card, Avatar, Button, Typography } from "antd";
+import Icon from "@ant-design/icons";
+import { Avatar, Button, Card, Typography } from "antd";
 import { Suspense } from "react";
-import { FaRegHeart, FaRegComment, FaRegPaperPlane } from "react-icons/fa";
+import { AiOutlineExport } from "react-icons/ai";
+import { FaPlus, FaRegHeart, FaRegPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { PostType } from "src/types/types";
 
@@ -10,7 +12,11 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
     <div className="max-w-6xl mx-auto py-8 ">
       <Suspense fallback={<h1>Loading...</h1>}>
         <Card>
-          <Text type="secondary">{postData.timeToRead}</Text>
+          <div className="flex justify-between items-center">
+            <Text type="secondary">{postData.timeToRead}</Text>
+            <Button type="link" icon={<AiOutlineExport size={20} />} />
+          </div>
+
           <Link to={`/p/${postData.id}`}>
             <Title level={2}>{postData.title}</Title>{" "}
           </Link>
@@ -27,16 +33,39 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
                   })}
                 </Text>
               </div>
+              <Button
+                type="primary"
+                icon={<Icon component={FaPlus} />}
+                iconPosition="end"
+              >
+                Follow
+              </Button>
             </div>
           </Link>
-          <div className="w-full overflow-hidden rounded-lg my-6">
-            <img className="w-full" alt="example" src={postData.img} />
-          </div>
-          <div className="flex justify-between w-full py-6">
+          <div className="flex gap-6 justify-end py-6">
             <Button type="link" icon={<FaRegHeart size={20} />} />
-            <Button type="link" icon={<FaRegComment size={20} />} />
-
             <Button type="link" icon={<FaRegPaperPlane size={20} />} />
+          </div>
+          <div className="w-full overflow-hidden object-cover rounded-lg my-6">
+            <img
+              className="w-full max-h-[70vh] object-cover"
+              alt="example"
+              src={postData.img}
+            />
+          </div>
+
+          <div id="blog-body" className="max-w-[80%] mx-auto">
+            <h1>Hello guyes this is a heading</h1>
+            <p>
+              Lorem ipsum dolor sit amet, <strong>wiow o </strong>consectetur
+              adipiscing elit. Integer tincidunt{" "}
+              <a href="#hello">this is link </a> blandit magna non tempus. Orci
+              varius natoque penatibus et magnis dis parturient montes, nascetur
+              ridiculus mus. Nam a lacinia erat. Sed gravida tincidunt magna.
+              Maecenas eget posuere arcu, a dictum odio. Suspendisse potenti.
+              Nulla facilisi. Curabitur consectetur sed diam et ullamcorper.
+              Nulla pharetra rhoncus enim in ornare.
+            </p>
           </div>
         </Card>
       </Suspense>
