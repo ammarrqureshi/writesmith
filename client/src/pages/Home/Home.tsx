@@ -45,8 +45,8 @@ export const Home = () => {
   ];
   return (
     <>
-      <div className="flex gap-4">
-        <div>
+      <div className="grid grid-cols-3 gap-4">
+        <div className="col-span-2">
           {posts.map((post) => (
             <FeedPost key={post.id} data={post} />
           ))}
