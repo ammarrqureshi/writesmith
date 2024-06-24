@@ -70,9 +70,13 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
           </div>
         </Card>
       </Suspense>
-
-      <div>
-        <SmallPostCard postData={postData} />
+      <div className=" mt-20">
+        <Title level={3}>More Posts</Title>
+        <div className="flex gap-6 justify-between mt-10">
+          <SmallPostCard postData={postData} />
+          <SmallPostCard postData={postData} />
+          <SmallPostCard postData={postData} />
+        </div>
       </div>
     </div>
   );

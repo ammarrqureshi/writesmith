@@ -7,17 +7,9 @@ const { Title, Text } = Typography;
 
 export const SmallPostCard = ({ postData }: { postData: PostType }) => {
   return (
-    <Card
-      cover={
-        <img
-          className="w-full max-h-[70vh] object-cover"
-          alt="example"
-          src={postData.img}
-        />
-      }
-    >
+    <Card cover={<img alt="related" src={postData.img} />}>
       <Link to={`/p/${postData.id}`}>
-        <Title level={2}>{postData.title}</Title>{" "}
+        <Title level={4}>{postData.title}</Title>{" "}
       </Link>
       <div className="flex gap-4 items-center">
         <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
