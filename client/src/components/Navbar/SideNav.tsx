@@ -7,6 +7,8 @@ interface SideNavProps {
   onClose: () => void;
 }
 
+const { Search } = Input;
+
 type MenuItem = Required<MenuProps>["items"][number];
 const items: MenuItem[] = [
   {
@@ -52,7 +54,7 @@ export const SideNav = ({ open, onClose }: SideNavProps) => {
     <Drawer
       width={300}
       placement="left"
-      title={<Input size="large" placeholder="Search" />}
+      title={<Search size="large" placeholder="Search" />}
       onClose={onClose}
       open={open}
       closeIcon={<AiOutlineLeft />}
