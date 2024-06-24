@@ -1,7 +1,7 @@
 import Icon from "@ant-design/icons";
 import { Avatar, Button, Card, Typography } from "antd";
 import { Suspense } from "react";
-import { AiOutlineExport } from "react-icons/ai";
+import { AiOutlineExport, AiOutlineHome } from "react-icons/ai";
 import { FaPlus, FaRegHeart, FaRegPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { SmallPostCard } from "src/components/HomeFeed/UI/SmallPostCard";
@@ -50,7 +50,7 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
           <div className="w-full overflow-hidden object-cover rounded-lg my-6">
             <img
               className="w-full max-h-[70vh] object-cover"
-              alt="example"
+              alt="cover-image"
               src={postData.img}
             />
           </div>
@@ -70,13 +70,23 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
           </div>
         </Card>
       </Suspense>
-      <div className=" mt-20">
+      <div className=" mt-20 flex flex-col gap-16 justify-between">
         <Title level={3}>More Posts</Title>
-        <div className="flex gap-6 justify-between mt-10">
-          <SmallPostCard postData={postData} />
-          <SmallPostCard postData={postData} />
+        <div className="flex gap-6 justify-between ">
+          {/* {postData.map((post) => (
+            <SmallPostCard postData={post} />
+          ))} */}
           <SmallPostCard postData={postData} />
         </div>
+
+        <Button
+          className="self-center mt-20"
+          type="primary"
+          icon={<Icon component={AiOutlineHome} />}
+          iconPosition="end"
+        >
+          Go to
+        </Button>
       </div>
     </div>
   );
