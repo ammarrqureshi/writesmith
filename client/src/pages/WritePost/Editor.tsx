@@ -28,6 +28,8 @@ export const Editor = () => {
           <Button className="ql-underline " type="text"></Button>
           <Button className="ql-strike " type="text"></Button>
           <Button className="ql-link " type="text"></Button>
+          <Button className="ql-blockquote" type="text"></Button>
+
           <Button className="ql-code-block " type="text"></Button>
 
           <Button className="ql-list " value="ordered" type="text"></Button>

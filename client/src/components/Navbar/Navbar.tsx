@@ -1,15 +1,30 @@
 import Icon from "@ant-design/icons/lib/components/Icon";
-import { Avatar, Button } from "antd";
+import { Avatar, Button, Drawer, Input } from "antd";
+import { useState } from "react";
 import { FaGripLines, FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import userimg from "src/assets/amq-dp.jpeg";
 import logo from "src/assets/writesmith-logo.svg";
+import { SideNav } from "./SideNav";
 
 export const Navbar = () => {
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
   const isLoggedIn = true;
   return (
     <div className=" flex justify-between items-center px-4 py-1 border-b">
-      <Button type="text" icon={<FaGripLines size={30} />} />
+      <Button
+        onClick={showDrawer}
+        type="text"
+        icon={<FaGripLines size={30} />}
+      />
 
       <div className="py-2">
         <Link to="/">
@@ -20,7 +35,7 @@ export const Navbar = () => {
         {isLoggedIn ? (
           <div className="flex gap-4">
             <Button
-            href="/write"
+              href="/write"
               type="primary"
               icon={<Icon component={FaRegEdit} />}
               iconPosition="end"
@@ -42,6 +57,8 @@ export const Navbar = () => {
           </div>
         )}
       </div>
+
+      <SideNav onClose={onClose} open={open}></SideNav>
     </div>
   );
 };
