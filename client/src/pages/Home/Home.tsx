@@ -1,6 +1,7 @@
 import { Typography } from "antd";
-import { AuthorsContainer } from "src/components/HomeFeed/AuthorsContainer";
-import { FeedPost } from "src/components/HomeFeed/FeedPost";
+import { AuthorsContainer } from "src/pages/Home/AuthorsContainer";
+import { FeedPost } from "src/pages/Home/FeedPost";
+import { RelatedPostContainer } from "../SinglePost/RelatedPostContainer";
 
 const { Title } = Typography;
 
@@ -53,7 +54,6 @@ export const Home = () => {
         </div>
         <div>
           <Title level={3}>Top Authors</Title>
-
           <AuthorsContainer />
         </div>
       </div>

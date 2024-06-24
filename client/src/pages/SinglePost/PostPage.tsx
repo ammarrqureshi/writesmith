@@ -4,15 +4,16 @@ import { Suspense } from "react";
 import { AiOutlineExport, AiOutlineHome } from "react-icons/ai";
 import { FaPlus, FaRegHeart, FaRegPaperPlane } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { SmallPostCard } from "src/components/HomeFeed/UI/SmallPostCard";
+import { SmallPostCard } from "src/components/UI/SmallPostCard";
 import { PostType } from "src/types/types";
+import { RelatedPostContainer } from "./RelatedPostContainer";
 
 const { Text, Title } = Typography;
 export const PostPage = ({ postData }: { postData: PostType }) => {
   return (
-    <div className="max-w-6xl mx-auto py-8 ">
+    <div>
       <Suspense fallback={<h1>Loading...</h1>}>
-        <Card>
+        <Card className="pb-10">
           <div className="flex justify-between items-center">
             <Text type="secondary">{postData.timeToRead}</Text>
             <Button type="link" icon={<AiOutlineExport size={20} />} />
@@ -49,7 +50,7 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
           </div>
           <div className="w-full overflow-hidden object-cover rounded-lg my-6">
             <img
-              className="w-full max-h-[70vh] object-cover"
+              className="w-full max-h-96 object-cover"
               alt="cover-image"
               src={postData.img}
             />
@@ -73,12 +74,10 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
       <div className=" mt-20 flex flex-col gap-16 justify-between">
         <Title level={3}>More Posts</Title>
         <div className="flex gap-6 justify-between ">
-          {/* {postData.map((post) => (
-            <SmallPostCard postData={post} />
-          ))} */}
+          <SmallPostCard postData={postData} />
+          <SmallPostCard postData={postData} />
           <SmallPostCard postData={postData} />
         </div>
-
         <Button
           className="self-center mt-20"
           type="primary"

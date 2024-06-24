@@ -20,6 +20,7 @@ export const Navbar = () => {
         {isLoggedIn ? (
           <div className="flex gap-4">
             <Button
+            href="/write"
               type="primary"
               icon={<Icon component={FaRegEdit} />}
               iconPosition="end"

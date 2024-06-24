@@ -1,15 +1,19 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
-import { Home } from "./pages/Home";
-import { Login } from "./pages/Login";
-import { PostPage } from "./pages/PostPage";
-import { Register } from "./pages/Register";
+import { Home } from "./pages/Home/Home";
+import { Login } from "./pages/UserAuth/Login";
+import { PostPage } from "./pages/SinglePost/PostPage";
+import { Register } from "./pages/UserAuth/Register";
+import { Editor } from "./pages/WritePost/Editor";
+import { Write } from "./pages/WritePost/Write";
 
 const Layout = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <div className="max-w-6xl mx-auto py-8">
+        <Outlet />
+      </div>
     </>
   );
 };
@@ -41,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/write",
-        element: <h1>write here...</h1>,
+        element: <Write />,
       },
     ],
   },
