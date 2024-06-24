@@ -1,7 +1,6 @@
 import { Button, Card } from "antd";
 import { useState } from "react";
-import { AiOutlineAlert } from "react-icons/ai";
-import ReactQuill, { Quill } from "react-quill";
+import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
 export const Editor = () => {
@@ -20,7 +19,7 @@ export const Editor = () => {
     <div className=" my-10 flex flex-col gap-8 relative">
       <Card
         size="small"
-        style={{ padding: 0}}
+        style={{ padding: 0 }}
         id="toolbar"
         className="sticky top-5 bg-white z-50"
       >
