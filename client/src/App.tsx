@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    // errorElement: <h1 className="w-full text-center text-3xl py-8">Oops! You did something stupid! </h1>,
+    errorElement: <h1 className="w-full text-center text-3xl py-8">Oops! You did something stupid! </h1>,
     children: [
       {
         path: "/",
