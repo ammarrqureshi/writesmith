@@ -8,8 +8,8 @@ export const AuthorCard = ({ authorData }: { authorData: AuthorType }) => {
   return (
     <div>
       <Card size="small">
-        <div className="flex gap-4 justify-around">
-          <Avatar size={40} src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
+        <div className="flex gap-4 justify-around items-center">
+          <Avatar size={50} src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />
           <div className="flex flex-col">
             <Text strong >{authorData.name}</Text>
             <Text>{authorData.designation}</Text>
