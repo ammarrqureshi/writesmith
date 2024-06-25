@@ -6,28 +6,28 @@ const authors = [
     name: "Chris Ahmed",
     designation: "Digital Entrepreneur and Creator",
     joinedDate: new Date("06-22-2014"),
-    avatar: "https://picsum.photos/100/100",
+    avatar: "https://picsum.photos/id/64/300/200",
   },
   {
     id: 2,
     name: "Ammar Qureshi",
     designation: "Digital Entrepreneur and Creator",
     joinedDate: new Date("06-22-2014"),
-    avatar: "https://picsum.photos/100/100",
+    avatar: "https://picsum.photos/id/237/300/200",
   },
   {
     id: 3,
     name: "Usama Kamran",
     designation: "Digital Entrepreneur and Creator",
     joinedDate: new Date("06-22-2014"),
-    avatar: "https://picsum.photos/100/100",
+    avatar: "https://picsum.photos/id/669/486/345",
   },
   {
     id: 4,
     name: "Noman Hussain",
     designation: "Digital Entrepreneur and Creator",
     joinedDate: new Date("06-22-2014"),
-    avatar: "https://picsum.photos/100/100",
+    avatar: "https://picsum.photos/id/823/500/333 ",
   },
 ];
 
