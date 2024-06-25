@@ -7,23 +7,25 @@ const { Text } = Typography;
 
 export const AuthorCard = ({ authorData }: { authorData: AuthorType }) => {
   return (
-    <Link to="/author/123">
-      <div>
-        <Card size="small">
-          <div className="flex gap-4 justify-around items-center">
-            <Avatar size={50} src={authorData.avatar} />
-            <div className="flex flex-col">
-              <Text strong>{authorData.name}</Text>
-              <Text>{authorData.designation}</Text>
+    <div>
+      <Card size="small">
+        <div className="flex gap-4 justify-around items-center">
+          <Link to="/author/123">
+            <div className="flex gap-4 items-center">
+              <Avatar size={50} src={authorData.avatar} />
+              <div className="flex flex-col">
+                <Text strong>{authorData.name}</Text>
+                <Text>{authorData.designation}</Text>
+              </div>{" "}
             </div>
-            <Button
-              onClick={() => alert("hello world")}
-              type="text"
-              icon={<AiOutlineUserAdd size={20} />}
-            />
-          </div>
-        </Card>
-      </div>{" "}
-    </Link>
+          </Link>
+          <Button
+            onClick={() => alert("hello world")}
+            type="text"
+            icon={<AiOutlineUserAdd size={20} />}
+          />
+        </div>
+      </Card>
+    </div>
   );
 };
