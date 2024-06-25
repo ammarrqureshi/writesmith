@@ -16,7 +16,11 @@ export const AuthorCard = ({ authorData }: { authorData: AuthorType }) => {
               <Text strong>{authorData.name}</Text>
               <Text>{authorData.designation}</Text>
             </div>
-            <Button type="text" icon={<AiOutlineUserAdd size={20} />} />
+            <Button
+              onClick={() => alert("hello world")}
+              type="text"
+              icon={<AiOutlineUserAdd size={20} />}
+            />
           </div>
         </Card>
       </div>{" "}
