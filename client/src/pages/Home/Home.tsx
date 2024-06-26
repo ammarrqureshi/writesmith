@@ -48,29 +48,28 @@ export const Home = () => {
     <>
       <div className="grid grid-cols-3 gap-x-20 relative ">
         <Tabs
-        defaultActiveKey="1"
-        items={[{
-          key:'1',
-          label: 'For you',
-          children:   <div className="col-span-2 flex flex-col gap-10">
-          {posts.map((post) => (
-            <FeedPost key={post.id} data={post} />
-          ))}
-        </div>
-
-        },
-      {
-        key:'2',
-        label: 'Following',
-        children:   <div className="col-span-2 flex flex-col gap-10">
-       Hello followers
-      </div>
-      }]
-      }
-
-      
+          className="col-span-2"
+          defaultActiveKey="1"
+          items={[
+            {
+              key: "1",
+              label: "For you",
+              children: (
+                <div className=" flex flex-col gap-10">
+                  {posts.map((post) => (
+                    <FeedPost key={post.id} data={post} />
+                  ))}
+                </div>
+              ),
+            },
+            {
+              key: "2",
+              label: "Following",
+              children: <div>Hello followers</div>,
+            },
+          ]}
         />
-      
+
         <div className="flex flex-col gap-10 sticky top-5 h-fit">
           <div>
             <Title level={3}>Top Authors</Title>
