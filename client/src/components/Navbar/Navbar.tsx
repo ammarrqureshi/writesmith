@@ -9,6 +9,9 @@ import { SideNav } from "./SideNav";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
+
+
+  //Drawer functions for the Drawer inside SideNav component 
   const showDrawer = () => {
     setOpen(true);
   };
@@ -16,6 +19,8 @@ export const Navbar = () => {
   const onClose = () => {
     setOpen(false);
   };
+//
+
 
   const isLoggedIn = true;
   return (
