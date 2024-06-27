@@ -23,70 +23,21 @@ export const Editor = () => {
         className="sticky top-5 bg-white z-50"
       >
         <div className="flex justify-around w-full">
-          {formats.map((format) => (
-            <Button
-              className={`ql-${format.format}`}
-              value={`${format.value}`}
-              type="text"
-            ></Button>
-          ))}
+          <Button className="ql-bold" type="text"></Button>
+          <Button className="ql-italic" type="text"></Button>
+          <Button className="ql-underline" type="text"></Button>
+          <Button className="ql-strike" type="text"></Button>
+          <Button className="ql-link" type="text"></Button>
+          <Button className="ql-blockquote" type="text"></Button>
+          <Button className="ql-code-block" type="text"></Button>
+          <Button className="ql-image" type="text"></Button>
+          <Button className="ql-list" value="ordered" type="text"></Button>
+          <Button className="ql-list" value="bullet" type="text"></Button>
+          <Button className="ql-header" value="1" type="text"></Button>
+          <Button className="ql-header" value="2" type="text"></Button>
         </div>
       </Card>
       <ReactQuill {...quill_options} value={content} onChange={setContent} />
     </div>
   );
 };
-
-//all Toolbar tools
-
-const formats = [
-  {
-    format: "bold",
-    value: "bold",
-  },
-  {
-    format: "italic",
-    value: "italic",
-  },
-  {
-    format: "underline",
-    value: "underline",
-  },
-  {
-    format: "strike",
-    value: "strike",
-  },
-  {
-    format: "link",
-    value: "link",
-  },
-  {
-    format: "blockquote",
-    value: "blockquote",
-  },
-  {
-    format: "code-block",
-    value: "code-block",
-  },
-  {
-    format: "image",
-    value: "image",
-  },
-
-  {
-    format: "list",
-    value: "ordered",
-  },
-  {
-    format: "list",
-    value: "bullet",
-  },
-  {
-    format: "header",
-    value: "1",
-  },
-  {
-    format: "header",
-    value: "2",
-  },
-];
