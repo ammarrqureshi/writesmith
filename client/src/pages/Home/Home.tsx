@@ -10,7 +10,7 @@ export const Home = () => {
     {
       id: 1,
       title: "How to get a new laptop for development",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt blandit magna non tempus. Orci varius natoque penatibus et magnis dis parturient montes, ",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt blandit magna non tempus. Orci varius natoque penatibus et magnis dis parturient montes, pus. Orci varius natoque penatibus et magnpus. Orci varius natoque penatibus et magnpus. Orci varius natoque penatibus et magn ",
       img: "https://picsum.photos/400/300",
       username: "Ammar Qureshi",
       createdAt: new Date("06-23-2023"),
@@ -65,7 +65,13 @@ export const Home = () => {
             {
               key: "2",
               label: "Following",
-              children: <div>Hello followers</div>,
+              children: (
+                <div className=" flex  flex-col-reverse gap-10">
+                  {posts.map((post) => (
+                    <FeedPost key={post.id} data={post} />
+                  ))}
+                </div>
+              ),
             },
           ]}
         />

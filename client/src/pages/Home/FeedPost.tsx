@@ -8,7 +8,7 @@ interface FeedPostProps {
   data: PostType;
 }
 
-const { Title, Text } = Typography;
+const { Title, Text, Paragraph } = Typography;
 export const FeedPost = ({ data }: FeedPostProps) => {
   return (
     <div>
@@ -25,6 +25,9 @@ export const FeedPost = ({ data }: FeedPostProps) => {
           <Text type="secondary">{data.timeToRead}</Text>
           <Link to={`/p/${data.id}`}>
             <Title level={2}>{data.title}</Title>{" "}
+            <Paragraph ellipsis={{ rows: 2 }} type="secondary">
+              {data.desc}
+            </Paragraph>
           </Link>
           <Link to={`/author/123`}>
             <div className="flex gap-4">
