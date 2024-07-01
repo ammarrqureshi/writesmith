@@ -1,20 +1,21 @@
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Link, Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Home } from "./pages/Home/Home";
 import { PostPage } from "./pages/SinglePost/PostPage";
 import { Login } from "./pages/UserAuth/Login";
 import { Register } from "./pages/UserAuth/Register";
 import { Write } from "./pages/WritePost/Write";
+import { Button } from "antd";
+import { FaRegEdit } from "react-icons/fa";
 
 const Layout = () => {
   return (
     <>
       <Navbar />
       <div className="max-w-6xl mx-auto py-8">
-        <Button >
-          
-        </Button>
-        <Outlet />
+        <Link to={'/write'}>
+        <Button className="fixed bottom-5 right-5" type="primary" shape="circle" icon={<FaRegEdit size={20}/>} />
+        </Link><Outlet />
       </div>
     </>
   );
