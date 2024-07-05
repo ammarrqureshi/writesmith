@@ -2,6 +2,9 @@ import { Button, Card, Checkbox, Input } from "antd";
 import { LuKey, LuUser } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
+const CLIENT_ID = "3434";
+const CLIENT_SECRET = "049iei";
+
 export const Login = () => {
   return (
     <div className=" h-screen flex justify-center items-center">
