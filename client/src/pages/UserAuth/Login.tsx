@@ -29,6 +29,10 @@ export const Login = () => {
               Create New Account
             </Button>
           </Link>
+          OR
+          <Button type="default" className="w-full">
+            Sign In with Google
+          </Button>
         </form>
       </Card>
     </div>

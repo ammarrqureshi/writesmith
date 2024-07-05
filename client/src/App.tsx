@@ -1,4 +1,9 @@
-import { Link, Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Link,
+  Outlet,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Home } from "./pages/Home/Home";
 import { PostPage } from "./pages/SinglePost/PostPage";
@@ -13,9 +18,15 @@ const Layout = () => {
     <>
       <Navbar />
       <div className="max-w-6xl mx-auto py-8">
-        <Link to={'/write'}>
-        <Button className="fixed bottom-5 right-5" type="primary" shape="circle" icon={<FaRegEdit size={20}/>} />
-        </Link><Outlet />
+        <Link to={"/write"}>
+          <Button
+            className="fixed bottom-5 right-5"
+            type="primary"
+            shape="circle"
+            icon={<FaRegEdit size={20} />}
+          />
+        </Link>
+        <Outlet />
       </div>
     </>
   );
@@ -24,7 +35,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <h1 className="w-full text-center text-3xl py-8">Oops! You did something stupid! </h1>,
+    errorElement: (
+      <h1 className="w-full text-center text-3xl py-8">
+        Oops! You did something stupid!{" "}
+      </h1>
+    ),
     children: [
       {
         path: "/",
