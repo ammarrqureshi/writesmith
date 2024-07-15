@@ -47,6 +47,7 @@ export const Home = () => {
   return (
     <>
       <div className="grid grid-cols-3 gap-x-20 relative ">
+        
         <Tabs
           className="col-span-2"
           defaultActiveKey="1"
@@ -56,7 +57,11 @@ export const Home = () => {
               label: "For you",
               children: (
                 <div className=" flex flex-col gap-10">
+<div>
+  df
+</div>
                   {posts.map((post) => (
+                
                     <FeedPost key={post.id} data={post} />
                   ))}
                 </div>

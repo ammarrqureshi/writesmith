@@ -17,7 +17,6 @@ export const PostPage = ({ postData }: { postData: PostType }) => {
             <Text type="secondary">{postData.timeToRead}</Text>
             <Button type="link" icon={<AiOutlineExport size={20} />} />
           </div>
-
           <Link to={`/p/${postData.id}`}>
             <Title level={2}>{postData.title}</Title>{" "}
           </Link>
