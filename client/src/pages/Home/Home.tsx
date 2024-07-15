@@ -1,7 +1,8 @@
-import { Tabs, Typography } from "antd";
+import { Tabs, Tag, Typography } from "antd";
 import { AuthorsContainer } from "src/pages/Home/AuthorsContainer";
 import { FeedPost } from "src/pages/Home/FeedPost";
 import { NewsletterForm } from "./NewsletterForm";
+import { useState } from "react";
 
 const { Title } = Typography;
 
@@ -44,6 +45,9 @@ export const Home = () => {
       timeToRead: "7 minutes read",
     },
   ];
+
+  const tagsData= ['All', 'Software', 'Art', 'Science']
+  const [selectedTag, setSelectedTag] = useState<string>('All')
   return (
     <>
       <div className="grid grid-cols-3 gap-x-20 relative ">
@@ -58,7 +62,14 @@ export const Home = () => {
               children: (
                 <div className=" flex flex-col gap-10">
 <div>
-  df
+{tagsData.map<React.ReactNode>((tag) => (
+        <Tag.CheckableTag
+          key={tag}
+          checked={selectedTags.includes(tag)}
+          onChange={(checked) => handleChange(tag, checked)}
+        >
+          {tag}
+        </Tag.CheckableTag>
 </div>
                   {posts.map((post) => (
                 
